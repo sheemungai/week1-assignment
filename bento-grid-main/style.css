@@ -1,0 +1,235 @@
+body{
+    font-family:'DM Sans' sans-serif;
+    font-weight: 400, 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.container{
+    display: grid;
+    max-width:  1200px;
+    max-height: 1000px;
+    gap: 1.5rem; 
+    grid-template-columns: repeat(4 ,1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    padding-block: 2rem;
+    margin-left: 100px; 
+    grid-template-areas: 
+     "card7 card1 card1 card4"
+     "card8 card2 card3 card4"
+     "card8 card6 card5 card5"
+    ;  
+
+}
+.card{
+
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.card4.grid-row-span-2{
+    grid-row: span 2;
+}
+ .card1.grid-col-span-2{
+    grid-column: span 2;
+}
+.card5.grid-col-span-2{
+    grid-column: span 2;
+}
+.card1{
+    grid-area: card1;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+    display: flex;
+    justify-content: center;
+    background-color: hsl(256, 67%, 59%);
+    align-items: center;
+}
+h1, h2, h3 {
+    margin: 0.5rem 0;
+    
+  }
+.card1 >h1{
+    color: white;
+    padding-bottom: 20px;
+}
+.card1 >h3{
+    color: white;
+}
+.img1{
+   width: 20rem;
+   height: auto;
+   
+
+}
+.p1{
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    width: auto;
+} 
+.card2{
+    grid-area: card2;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+    align-items: center;
+    
+}
+.card2 >h2{
+    padding-top: 150px;
+}
+.img2{
+    width: 20rem;
+    size: 1em;
+    height: auto;
+}
+.card3{
+    grid-area: card3;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+    background-color: hsl(39, 100%, 71%);
+}
+.img3{
+    width: 20rem;
+    padding-top: 40px;
+}
+.card4{
+    grid-area: card4;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+    background-color:  hsl(254, 88%, 90%);
+}
+
+.img4{
+    width: 20rem;
+    height: auto;
+}
+.card5{
+    grid-area: card5;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+    background-color: hsl(256, 67%, 59%);
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+.highlight{
+    color: hsl(39, 100%, 71%) ;
+}
+.card5 >h1{
+    color: white;
+    padding-top: 30px;
+   padding-right: 30px;
+   align-items: center;
+   font-size: 50px;
+   
+    
+}
+.img5{
+    width: 15rem;
+    
+ 
+}
+.highlights{
+    color:hsl(256, 67%, 59%) ;
+}
+.card6{
+    grid-area: card6;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+    
+}
+.img6{
+    width: 10rem;
+}
+.card6 > h1{
+    font-size: 50px;
+}
+.card7{
+    grid-area: card7 ;
+    
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+   background-color: hsl(31, 66%, 93%);
+}
+.img7{
+    width: 10rem;
+}
+.card8{
+    grid-area: card8;
+
+    box-shadow: 0 0 8px 0 rgba(0,0,0,2);
+    background-color: hsl(39, 100%, 71%);
+   
+}
+.img8{
+    width: 10rem;
+}
+
+
+@media (max-width: 1440px) {
+    .container {
+      max-width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+        "card7 card1 card1 card4"
+        "card8 card2 card3 card4"
+        "card8 card6 card5 card5";
+    }
+  
+    .card1 > h1, .card1 > h3,
+    .card5 > h1, .card6 > h1 {
+      font-size: 1.8rem;
+    }
+  
+    .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8 {
+      max-width: 100%;
+    }
+  
+    .card5 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  
+  @media (max-width: 375px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1.5rem;
+      margin: 0 auto;
+    }
+  
+    .card {
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .card5 {
+      flex-direction: column;
+    }
+  
+    .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8 {
+      width: 100%;
+      height: auto;
+    }
+  
+    .card1 > h1, .card1 > h3,
+    .card5 > h1, .card6 > h1 {
+      font-size: 1.5rem;
+    }
+  
+    .p1 {
+      font-size: 1rem;
+      padding: 0;
+    }
+  }
+  
